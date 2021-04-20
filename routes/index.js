@@ -42,7 +42,7 @@ route.get('/forgot', (req, res, next) => {
   res.render('index', {title: "Forgot Password Page"})
 })
 
-//POST Forget Password
+//POST Forgot Password
 route.post('/forgot', (req, res, next) => {
   res.render('index', {title: 'POST forgot password'})
   })
@@ -52,6 +52,9 @@ route.get('/reset/:token', (req,res, next) => {
   res.render('index', {title: 'GET Reset Password'})
 })
 
-//PUt
+//PUT Reset password - Takes Token
+route.put('/reset/:token', (req, res, next) => {
+  res.render('index', {title: 'PUT Reset Password'})
+})
 
 module.exports = router;
